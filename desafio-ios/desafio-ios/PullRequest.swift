@@ -9,12 +9,13 @@
 import Foundation
 
 struct PullRequest {
-        //PR
-        let title:String //Título do PR
-        let login:String //Nome do autor do PR
-        let avatar_URL_PR:String //Avatar do usuário/autor do PR (se tiver);
-        let body:String //Body do PR
-        let createdAt:String //Data do PR
+    //PR
+    let title:String //Título do PR
+    let login:String //Nome do autor do PR
+    let avatar_URL_PR:String //Avatar do usuário/autor do PR (se tiver);
+    let body:String //Body do PR
+    let createdAt:String //Data do PR
+    let numberPR:Int //Número do PR
 }
 
 enum SerializationErrorPR:Error {
@@ -47,11 +48,16 @@ extension PullRequest{
             throw SerializationErrorPR.missing("createdAt")
         }
         
+        guard let numberPR = json["number"] as? Int else{
+            throw SerializationErrorPR.missing("number")
+        }
+        
         //PR
         self.title = title
         self.login = login
         self.avatar_URL_PR = avatar_URL_PR
         self.body = body
         self.createdAt = createdAt
+        self.numberPR = numberPR
     }
 }

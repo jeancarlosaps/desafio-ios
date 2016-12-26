@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9115B6D1E1186160065DA08 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9115B6C1E1186160065DA08 /* WebViewViewController.swift */; };
 		D9157AF51DA6D2450083C89C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9157AF41DA6D2440083C89C /* AppDelegate.swift */; };
 		D9157AF71DA6D2450083C89C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9157AF61DA6D2450083C89C /* ViewController.swift */; };
 		D9157AFA1DA6D2450083C89C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9157AF81DA6D2450083C89C /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		A274C949DB61D23516CAD535 /* Pods-desafio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafio-ios/Pods-desafio-ios.release.xcconfig"; sourceTree = "<group>"; };
 		ACADAE1D2E0DB04143EA4070 /* Pods_desafio_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9127695DDEAECDB263FB20C /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D9115B6C1E1186160065DA08 /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		D9157AF11DA6D2440083C89C /* desafio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9157AF41DA6D2440083C89C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9157AF61DA6D2450083C89C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				D9157AF41DA6D2440083C89C /* AppDelegate.swift */,
 				D9157AF61DA6D2450083C89C /* ViewController.swift */,
 				D9C8D3AE1DBE9113007E975E /* RepoDetailViewController.swift */,
+				D9115B6C1E1186160065DA08 /* WebViewViewController.swift */,
 				D9305B341DB402B20065FA1D /* Repo.swift */,
 				D9636F801E02D79200BA9176 /* PullRequest.swift */,
 				D9157AF81DA6D2450083C89C /* Main.storyboard */,
@@ -245,6 +248,7 @@
 				D9A66E791DDF935B000D3F56 /* CustonTableViewCellDetail.swift in Sources */,
 				D9C8D3AF1DBE9113007E975E /* RepoDetailViewController.swift in Sources */,
 				D9157AF71DA6D2450083C89C /* ViewController.swift in Sources */,
+				D9115B6D1E1186160065DA08 /* WebViewViewController.swift in Sources */,
 				D9157AF51DA6D2450083C89C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

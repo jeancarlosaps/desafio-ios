@@ -9,7 +9,6 @@
 import UIKit
 //import PINRemoteImage
 
-
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Outlets;
@@ -21,7 +20,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Função que faz o request na API do github;
     func request() {
         typealias ReposResponse = [String:Any]
-        
         let repoUrlString = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1"
         
         let session = URLSession.shared
@@ -42,15 +40,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         DispatchQueue.main.async {
                             self?.tableView.reloadData()
                         }
-                        
                     } catch let error {
                         print(error)
                     }
-                    
                 } else {
                     print("Wrong format")
                 }
-                
             } catch let error {
                 print(error)
             }
@@ -73,10 +68,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //MARK: Métodos de UITableViewDelegate e UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        DispatchQueue.main.async {
-//            tableView.reloadData()
-//        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustonTableViewCell
         
         let meuObjetoRepo:Repo = repoList[indexPath.row] as Repo
@@ -108,6 +99,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         repoDetailVC.prCreator = repoList[indexPath.row].userName
         repoDetailVC.prRepository = repoList[indexPath.row].nameRepo
     }
-
 }
 

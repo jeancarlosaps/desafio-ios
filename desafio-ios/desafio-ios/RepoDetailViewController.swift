@@ -7,8 +7,9 @@
 // //"https://api.github.com/repos/%3Ccriador%3E/%3Creposit%C3%B3rio%3E/pulls"
 
 import UIKit
+import SafariServices
 
-class RepoDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RepoDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     // MARK: Outlets
     @IBOutlet weak var tableViewRepoDetail: UITableView!
@@ -26,8 +27,6 @@ class RepoDetailViewController: UIViewController, UITableViewDataSource, UITable
         if let prCreator = prCreator, let prRepository = prRepository{
             
             let urlPullRequest = "https://api.github.com/repos/\(prCreator)/\(prRepository)/pulls"
-            
-            print(urlPullRequest)
             
             let session = URLSession.shared
             (session.dataTask(with: URL(string:urlPullRequest)!) { [weak self] (data, reponse, error) in
@@ -47,23 +46,18 @@ class RepoDetailViewController: UIViewController, UITableViewDataSource, UITable
                             DispatchQueue.main.async {
                                 self?.tableViewRepoDetail.reloadData()
                             }
-                            
                             print(self?.pullRequestList.count)
                         } catch let error {
                             print(error)
                         }
-                        
                     } else {
                         print("Wrong format")
                     }
-                    
                 } catch let error {
                     print(error)
                 }
-                
             }).resume()
         }
-        
     }
     
     override func viewDidLoad() {
@@ -82,17 +76,15 @@ class RepoDetailViewController: UIViewController, UITableViewDataSource, UITable
     
     //MARK: Métodos de UITableViewDelegate e UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        DispatchQueue.main.async {
-//            self.tableViewRepoDetail.reloadData()
-//        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustonTableViewCellDetail
         
         let meuObjetoPR:PullRequest = pullRequestList[indexPath.row] as PullRequest
         
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: NSURL(string: meuObjetoPR.avatar_URL_PR) as! URL)
-            cell.imgAvatarPR.image = UIImage(data: data!)
+            DispatchQueue.global().async {
+                cell.imgAvatarPR.image = UIImage(data: data!)
+            }
         }
         
         cell.lblTittlePR.text = pullRequestList[indexPath.row].title
@@ -105,5 +97,16 @@ class RepoDetailViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pullRequestList.count
+    }
+    
+    //MARK: PrepareForSegue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let webViewControllerVC = segue.destination as? WebViewViewController else {return}
+        guard let cell = sender as? UITableViewCell else {return}
+        guard let indexPath = tableViewRepoDetail.indexPath(for: cell) else {return}
+        
+        webViewControllerVC.prWebViewCreator = prCreator
+        webViewControllerVC.prWebViewRepository = prRepository
+        webViewControllerVC.prWebViewNumber = pullRequestList[indexPath.row].numberPR
     }
 }
