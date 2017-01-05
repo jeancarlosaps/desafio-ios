@@ -14,6 +14,8 @@
 		D9157AFC1DA6D2450083C89C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9157AFB1DA6D2450083C89C /* Assets.xcassets */; };
 		D9157AFF1DA6D2450083C89C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9157AFD1DA6D2450083C89C /* LaunchScreen.storyboard */; };
 		D9305B351DB402B20065FA1D /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9305B341DB402B20065FA1D /* Repo.swift */; };
+		D9566F8C1E15598000F80470 /* RequestRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9566F8B1E15598000F80470 /* RequestRepo.swift */; };
+		D9566F8E1E15599D00F80470 /* RequestPR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9566F8D1E15599D00F80470 /* RequestPR.swift */; };
 		D9636F811E02D79200BA9176 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9636F801E02D79200BA9176 /* PullRequest.swift */; };
 		D9863A311DF7AC33006379D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9863A301DF7AC33006379D2 /* MapKit.framework */; };
 		D9A66E791DDF935B000D3F56 /* CustonTableViewCellDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A66E781DDF935B000D3F56 /* CustonTableViewCellDetail.swift */; };
@@ -29,16 +31,18 @@
 		D9115B6C1E1186160065DA08 /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		D9157AF11DA6D2440083C89C /* desafio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9157AF41DA6D2440083C89C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9157AF61DA6D2450083C89C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9157AF61DA6D2450083C89C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		D9157AF91DA6D2450083C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9157AFB1DA6D2450083C89C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9157AFE1DA6D2450083C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9157B001DA6D2450083C89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9305B341DB402B20065FA1D /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
-		D9636F801E02D79200BA9176 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		D9305B341DB402B20065FA1D /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
+		D9566F8B1E15598000F80470 /* RequestRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRepo.swift; sourceTree = "<group>"; };
+		D9566F8D1E15599D00F80470 /* RequestPR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPR.swift; sourceTree = "<group>"; };
+		D9636F801E02D79200BA9176 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullRequest.swift; path = ../PullRequest.swift; sourceTree = "<group>"; };
 		D9863A301DF7AC33006379D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D9A66E781DDF935B000D3F56 /* CustonTableViewCellDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewCellDetail.swift; sourceTree = "<group>"; };
-		D9C8D3AE1DBE9113007E975E /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		D9C8D3AE1DBE9113007E975E /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepoDetailViewController.swift; path = ../RepoDetailViewController.swift; sourceTree = "<group>"; };
 		D9DF51571DA83AF900395B04 /* CustonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,20 +98,46 @@
 		D9157AF31DA6D2440083C89C /* desafio-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D9566F881E15591600F80470 /* API */,
+				D9566F891E15591600F80470 /* Controllers */,
+				D9566F8A1E15591600F80470 /* Models */,
 				D9A66E781DDF935B000D3F56 /* CustonTableViewCellDetail.swift */,
 				D9DF51571DA83AF900395B04 /* CustonTableViewCell.swift */,
 				D9157AF41DA6D2440083C89C /* AppDelegate.swift */,
-				D9157AF61DA6D2450083C89C /* ViewController.swift */,
-				D9C8D3AE1DBE9113007E975E /* RepoDetailViewController.swift */,
 				D9115B6C1E1186160065DA08 /* WebViewViewController.swift */,
-				D9305B341DB402B20065FA1D /* Repo.swift */,
-				D9636F801E02D79200BA9176 /* PullRequest.swift */,
 				D9157AF81DA6D2450083C89C /* Main.storyboard */,
 				D9157AFB1DA6D2450083C89C /* Assets.xcassets */,
 				D9157AFD1DA6D2450083C89C /* LaunchScreen.storyboard */,
 				D9157B001DA6D2450083C89C /* Info.plist */,
 			);
 			path = "desafio-ios";
+			sourceTree = "<group>";
+		};
+		D9566F881E15591600F80470 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D9566F8B1E15598000F80470 /* RequestRepo.swift */,
+				D9566F8D1E15599D00F80470 /* RequestPR.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D9566F891E15591600F80470 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9157AF61DA6D2450083C89C /* ViewController.swift */,
+				D9C8D3AE1DBE9113007E975E /* RepoDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9566F8A1E15591600F80470 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9305B341DB402B20065FA1D /* Repo.swift */,
+				D9636F801E02D79200BA9176 /* PullRequest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9DF51581DA83AF900395B04 /* CustonTableViewCell.swift in Sources */,
+				D9566F8C1E15598000F80470 /* RequestRepo.swift in Sources */,
 				D9305B351DB402B20065FA1D /* Repo.swift in Sources */,
 				D9636F811E02D79200BA9176 /* PullRequest.swift in Sources */,
 				D9A66E791DDF935B000D3F56 /* CustonTableViewCellDetail.swift in Sources */,
+				D9566F8E1E15599D00F80470 /* RequestPR.swift in Sources */,
 				D9C8D3AF1DBE9113007E975E /* RepoDetailViewController.swift in Sources */,
 				D9157AF71DA6D2450083C89C /* ViewController.swift in Sources */,
 				D9115B6D1E1186160065DA08 /* WebViewViewController.swift in Sources */,
