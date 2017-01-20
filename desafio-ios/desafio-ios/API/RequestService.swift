@@ -15,7 +15,7 @@ class GetRepo{
     //var repoVC = ViewController()
     
     // Função que faz o request na API do github;
-    func request(completation: (([Repo]) -> Void)!) {
+    func request(_ callback: (([Repo]) -> Void)!) {
         typealias ReposResponse = [String:Any]
         let repoUrlString = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1"
         
